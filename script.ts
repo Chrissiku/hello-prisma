@@ -30,6 +30,17 @@ async function main() {
   });
   //   console.log(user);
   console.dir(usersWithPosts, { depth: null });
+
+  // create a post
+  //   const post = await prisma.post.create({
+  //     data: {
+  //       title: "Prisma makes databases easy",
+  //       content: "You wouldn't believe how easy it is to use Prisma",
+  //       authorId: 1,
+  //     },
+  //   });
+
+  //   console.log(post);
 }
 
 main()
