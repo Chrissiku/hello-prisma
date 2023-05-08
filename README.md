@@ -17,13 +17,13 @@ Before you begin, make sure you have the following:
 To install the course files, simply clone the repository to your local machine:
 
 ```
-git clone https://github.com/<USERNAME>/hello-prisma-beginner-course.git
+git clone https://github.com/Chrissiku/hello-prisma.git
 ```
 
 Then, navigate to the project directory and install the dependencies:
 
 ```
-cd hello-prisma-beginner-course
+cd hello-prisma
 npm install
 ```
 
