@@ -3,7 +3,6 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  // Prisma Client queries here
   //   Create a new user
   //   const user = await prisma.user.create({
   //     data: {
@@ -11,10 +10,26 @@ async function main() {
   //       email: "chrissiku5@gmail.com",
   //     },
   //   });
-
   //  Read all users
-  const user = await prisma.user.findMany();
-  console.log(user);
+  //   const user = await prisma.user.findMany();
+  // Create a new post
+  //   const user = await prisma.user.create({
+  //     data: {
+  //       name: "Nabil",
+  //       email: "nabil@gmail.com",
+  //       posts: {
+  //         create: { title: "Hello World" },
+  //       },
+  //     },
+  //   });
+  // Retrieve all posts with their authors
+  const usersWithPosts = await prisma.user.findMany({
+    include: {
+      posts: true,
+    },
+  });
+  //   console.log(user);
+  console.dir(usersWithPosts, { depth: null });
 }
 
 main()
